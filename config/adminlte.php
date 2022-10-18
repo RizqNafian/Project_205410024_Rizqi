@@ -320,8 +320,8 @@ return [
         ],
         ['header' => 'account_settings'],
         [
-            'text' => 'profile',
-            'url'  => 'admin/settings',
+            'text' => 'User',
+            'url'  => 'users/',
             'icon' => 'fas fa-fw fa-user',
         ],
         [
@@ -330,12 +330,16 @@ return [
             'icon' => 'fas fa-fw fa-lock',
         ],
         [
-            'text'    => 'multilevel',
+            'text'    => 'Master Tabel',
             'icon'    => 'fas fa-fw fa-share',
             'submenu' => [
                 [
-                    'text' => 'level_one',
-                    'url'  => '#',
+                    'text' => 'Pangkat Golongan',
+                    'url'  => 'mst-pangkat',
+                ],
+                [
+                    'text' => 'Jabatan Setruktural',
+                    'url'  => 'mst-jabatan',
                 ],
                 [
                     'text'    => 'level_one',
@@ -367,16 +371,16 @@ return [
                 ],
             ],
         ],
-        ['header' => 'labels'],
+        ['header' => 'Transaksi'],
         [
-            'text'       => 'important',
+            'text'       => 'Pegawai',
             'icon_color' => 'red',
-            'url'        => '#',
+            'url'        => 'pegawai',
         ],
         [
-            'text'       => 'warning',
+            'text'       => 'Kenaikan Pangkat',
             'icon_color' => 'yellow',
-            'url'        => '#',
+            'url'        => 'riwayat-pangkat',
         ],
         [
             'text'       => 'information',
