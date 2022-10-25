@@ -7,7 +7,6 @@ use Illuminate\Support\Facades\DB;
 use Yajra\DataTables\DataTables;
 use App\Models\RiwayatPangkat;
 use App\Models\Pegawai;
-use App\Models\MstPangkat;
 
 class RiwayatPangkatController extends Controller
 {
@@ -22,7 +21,8 @@ class RiwayatPangkatController extends Controller
             ->addIndexColumn()
             ->addColumn('action', function($row){
                 $btn = '
-                <a href="'.route('riwayat-pangkat.proses',$row->id).'" class="btn btn-primary btn-sm fa fa-eye"></a>';
+                <a href="'.route('riwayat-pangkat.proses',$row->id).'" class="btn btn-primary btn-sm fa fa-pen-nib"></a>
+                <a href="'.route('riwayat-pangkat.cetak',$row->id).'" class="btn btn-success btn-sm fa fa-print"></a>';
                 return $btn;
             })
             ->rawColumns(['action','no'])

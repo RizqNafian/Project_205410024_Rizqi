@@ -4,7 +4,7 @@
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="/home">Home</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Tabel Master Pegawai</li>
+        <li class="breadcrumb-item active" aria-current="page">Pegawai</li>
     </ol>
  </nav>
 @stop
@@ -23,15 +23,12 @@
                         <span id="card_title">
                             <h3>Tabel Master Pegawai</h3>
                         </span>
-                        <div class="float-right">
-                            <h2><a href="{{ route('pegawai.create') }}" class="btn btn-primary btn-sm">Add</a></h2>
-                        </div>
                     </div>
                 </div>
                 @if ($message = Session::get('success'))
-                    <div class="alert alert-success">
-                        <p>{{ $message }}</p>
-                    </div>
+                <div class="alert alert-success">
+                    <p>{{ $message }}</p>
+                </div>
                 @endif
                 <div class="card-body">
                     <div class="col-12 table-responsive">

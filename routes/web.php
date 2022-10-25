@@ -124,7 +124,8 @@ Route::get('delpegawai/{id}', [PegawaiController::class, 'destroy'])
 Route::resource('riwayat-pangkat',RiwayatPangkatController::class)->except(['destroy','create']);
 Route::get('proses/{id}', [RiwayatPangkatController::class, 'proses'])
 ->name('riwayat-pangkat.proses');
-Route::get('riwayat-pangkat/create/{id}',[RiwayatPangkatController::class,'create']);
+Route::get('riwayat-pangkat/create/{id}',[RiwayatPangkatController::class,'create'])
+->name('riwayat-pangkat.create');
 Route::get('delpangkat/{id}', [RiwayatPangkatController::class, 'destroy'])
  ->name('riwayat-pangkat.destroy');
 Route::get('/riwayat-pangkat/cetak/{id}',[RiwayatPangkatController::class,'cetak'])
